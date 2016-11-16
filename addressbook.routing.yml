@@ -1,0 +1,39 @@
+addressbook.add:
+  path: '/addressbook/add'
+  defaults: 
+    _title: 'Add addressbook'
+    _form: '\Drupal\addressbook\Form\AddressBookForm'
+  requirements:
+    _permission: 'addressbook edit permission'
+    
+addressbook.list:
+  path: '/addressbook/list'
+  defaults:
+    _title: 'Address Book'
+    _controller: '\Drupal\addressbook\Controller\AddressBookListController::addressbookList'
+  requirements:
+    _permission: 'access content'
+
+addressbook.view:
+  path: '/addressbook/{id}/view'
+  defaults:
+    _title: 'Address Book'
+    _controller: '\Drupal\addressbook\Controller\AddressBookController::showAddressBook'
+  requirements:
+    _permission: 'access content'
+
+addressbook.edit:
+  path: '/addressbook/{id}/edit'
+  defaults:
+    _title: 'Edit address'
+    _form: '\Drupal\addressbook\Form\AddressBookForm'
+  requirements:
+    _permission: 'addressbook edit permission'
+
+addressbook.search:
+  path: '/addressbook/search/{search_type}/{search_term}'
+  defaults:
+    _title: 'Search Addressbook'
+    _controller: '\Drupal\addressbook\Controller\AddressBookListController::addressbookSearch'
+  requirements:
+    _permission: 'access content'

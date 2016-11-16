@@ -1,0 +1,11 @@
+addressbook.view:
+  title: View Details
+  route_name: addressbook.view
+  base_route: addressbook.view
+  parent: main
+
+addressbook.edit:
+  title: Edit Details
+  route_name: addressbook.edit
+  base_route: addressbook.view
+  parent: main

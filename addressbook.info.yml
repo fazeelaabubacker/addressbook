@@ -1,0 +1,5 @@
+name: Addressbook
+description: To create, edit and manage addressbooks.
+core: 8.x
+type: module
+package: Custom

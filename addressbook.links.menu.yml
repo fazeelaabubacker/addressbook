@@ -1,0 +1,8 @@
+addressbook.add:
+  title: 'Add address'
+  description: 'Manage example settings for your site'
+  parent: addressbook.add
+  route_name: addressbook.add
+  weight: 100
+  #If menu_name is omitted, the "Tools" menu will be used.
+  menu_name: main

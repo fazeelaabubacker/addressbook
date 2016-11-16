@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Contains schema, install and uninstall functions.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function addressbook_schema() {
+  $schema['addressbook'] = array(
+    'description' => 'Table to store addressbook',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Primary key of addressbook',
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Name of the person',
+      ),
+      'email' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Email id of the person',
+      ),
+      'phone' => array(
+        'type' => 'int',
+        'length' => 10,
+        'not null' => TRUE,
+        'description' => 'Phone number of the person',
+      ),
+      'dob' => array(
+        'type' => 'int',
+        'length' => 12,
+        'not null' => TRUE,
+        'description' => 'DOB of the person',
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}
